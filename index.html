@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agility Form</title>
+</head>
+<body>
+    <section>
+    <h1>Agility Score Form</h1>
+    <span>You can input race results and download as a CSV file to upload to excel</span>
+    </section>
+    <section>
+        <form name="event-form" action="">
+            <label for="date">Date</label><br>
+            <input type="date" name="date"><br>
+            <label for="organization">Organization</label><br>
+            <input type="text" name="organization"><br>
+            <label for="clubname">Club Name</label><br>
+            <input type="text" name="club-name"><br>
+            <label for="event">Event</label><br>
+            <input type="text" name="event"><br>
+            <label for="level">Level</label><br>
+            <input type="text" name="level"><br>
+            <label for="q"></label>Did you Q?<br>
+            <input type="radio" name="q" id="q" value="Q">
+            <label for="q">Q</label><br>
+            <input type="radio" name="q" id="nq" value="NQ">
+            <label for="nq">NQ</label><br>
+            <label for="score">Score</label><br>
+            <input type="number" name="score"><br>
+            <label for="distance">Distance (yards)</label><br>
+            <input type="number" name="distance"><br>
+            <label for="time">Time</label><br>
+            <input type="number" name="time"><br>
+            <label for="seconds-over">Seconds Over</label><br>
+            <input type="number" name="seconds-over"><br>
+            <label for="yps">Yards per Second</label><br>
+            <input type="number" name="yps"><br>
+            <label for="r"></label>R<br>
+            <input type="number" name="r"><br>
+            <label for="w">W</label><br>
+            <input type="number" name="w"><br>
+            <label for="f">F</label><br>
+            <input type="number" name="f"><br>
+            <label for="e">E</label><br>
+            <input type="number" name="e"><br>
+            <label for="t">T</label><br>
+            <input type="number" name="t"><br>
+            <label for="total-f">Total F</label><br>
+            <input type="number" name="total-f"><br>
+            <label for="notes">Notes</label><br>
+            <input type="text" name="notes" class="notes"><br>
+            <input type="submit" value="Download CSV" id="download" onClick="printData(this.form)"><br>
+            <input type="reset"><br>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
