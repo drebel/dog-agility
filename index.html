@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agility Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
@@ -12,7 +13,7 @@
     <span>You can input race results and download as a CSV file to upload to excel</span>
     </section>
     <section>
-        <form name="event-form" action="">
+        <form id="race-data" action="">
             <label for="date">Date</label><br>
             <input type="date" name="date"><br>
             <label for="organization">Organization</label><br>
@@ -33,11 +34,11 @@
             <label for="distance">Distance (yards)</label><br>
             <input type="number" name="distance"><br>
             <label for="time">Time</label><br>
-            <input type="number" name="time"><br>
+            <input type="number" name="time" step="0.01"><br>
             <label for="seconds-over">Seconds Over</label><br>
-            <input type="number" name="seconds-over"><br>
+            <input type="number" name="seconds-over" step="0.01"><br>
             <label for="yps">Yards per Second</label><br>
-            <input type="number" name="yps"><br>
+            <input type="number" name="yps" step="0.01"><br>
             <label for="r"></label>R<br>
             <input type="number" name="r"><br>
             <label for="w">W</label><br>
@@ -52,9 +53,14 @@
             <input type="number" name="total-f"><br>
             <label for="notes">Notes</label><br>
             <input type="text" name="notes" class="notes"><br>
-            <input type="submit" value="Download CSV" id="download" onClick="printData(this.form)"><br>
+            <input type="submit" value="Submit" id="submit"><br>
             <input type="reset"><br>
-        </form>
+        </form><br>
+
+        <!-- <input type="checkbox" name="want-headers">
+        <label for="want-headers">Check this box if you want a header line on your CSV file</label> -->
+        <button id="btnExport">Download CSV</button>
+
     </section>
 
     <script src="main.js"></script>
